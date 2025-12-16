@@ -249,7 +249,7 @@ if os.path.exists(skills_dir):
 plugin_json = {
     "name": plugin_name,
     "version": plugin_version,
-    "description": "Skills collection from GitHub: Comprehensive set of development skills including TypeScript, FastAPI, error handling, code review, and more.",
+  "description": "Skills collection from GitHub: Comprehensive set of development skills including TypeScript, FastAPI, error handling, code review, and more.",
     "repository": repo_url,
     "skills": skills
 }
@@ -282,24 +282,24 @@ plugin_dir = "$PLUGIN_DIR"
 plugin_name = "$PLUGIN_NAME"
 plugin_version = "$PLUGIN_VERSION"
 marketplace_name = "$MARKETPLACE_NAME"
-
-# 创建 marketplace.json
+    
+    # 创建 marketplace.json
 # 注意：marketplace.json 不应该包含 skills 字段，skills 应该从插件的 plugin.json 中读取
 marketplace_json = {
     "name": marketplace_name,
-    "owner": {
-        "name": "Local Developer",
-        "email": "local@example.com"
-    },
-    "metadata": {
-        "description": "Local skills bundle from GitHub: karmaxteq/choose-for-skill",
+  "owner": {
+    "name": "Local Developer",
+    "email": "local@example.com"
+  },
+  "metadata": {
+    "description": "Local skills bundle from GitHub: karmaxteq/choose-for-skill",
         "version": plugin_version
-    },
-    "plugins": [
-        {
+  },
+  "plugins": [
+    {
             "name": plugin_name,
             "version": plugin_version,
-            "description": "Skills collection from GitHub: Comprehensive set of development skills including TypeScript, FastAPI, error handling, code review, and more.",
+      "description": "Skills collection from GitHub: Comprehensive set of development skills including TypeScript, FastAPI, error handling, code review, and more.",
             "source": f"./{plugin_name}/{plugin_version}",
             "strict": False
         }

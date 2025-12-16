@@ -1,15 +1,3 @@
-# 方式1: 使用 killall（推荐）
-
-killall "Claude Code" 2>/dev/null || killall "claude" 2>/dev/null
-
-# 方式2: 强制退出所有相关进程
-
-ps aux | grep -i "claude" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null
-
-# 方式3: 使用 pkill
-
-pkill -f "claude-code" || pkill -f "claude"
-
 ## 编程模式与语言实践
 
 * `error-handling-patterns`: 跨 Python/TS/Go/Rust 的异常体系、Result 模式、重试、断路器、降级等健壮性范式。
